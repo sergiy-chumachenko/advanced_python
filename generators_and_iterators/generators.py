@@ -11,6 +11,8 @@ exp = (x for x in range(10))
 print(exp)  # <generator object <genexpr> at 0x7f4f41942938>
 print(type(exp))  # <class 'generator'>
 
+print('*'*50)
+
 
 # Generator object
 def simple_generator(val):
@@ -26,13 +28,15 @@ for elem in gen:
     print(elem)  # 9, 8, 7, 6 ...
 
 # Can be used only one time
-
+print('*'*50)
 gen2 = simple_generator(10)  # Create Generator
 print(next(gen2))  # 9, 8, 7, 6 ...
 print(next(gen2))
 print(next(gen2))
 print(next(gen2))
 print(next(gen2))
+print('*'*50)
 
-
-
+gen3 = (num*2 for num in range(10))
+for _ in range(10):
+    print(gen3.__next__())
