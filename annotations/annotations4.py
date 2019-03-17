@@ -28,8 +28,10 @@ price_with_tuple: Tuple[int, str] = (1, "hello")
 prices: Tuple[int, ...] = (1, 2)  # OK
 prices = (1,)  # OK
 
-#  Incompatible types in assignment (expression has type "Tuple[int, str]", variable has type "Tuple[int, ...]")
-# prices = (1, "hello")
+# Incompatible types in assignment (expression has type "Tuple[int, str]", variable has type "Tuple[int, ...]")
+# prices = (1, 'str')
+
+prices = (1, 2, 3)  # OK
 
 something: Tuple = (1, 2, "hello", "hi")  # OK
 
