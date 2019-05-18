@@ -16,7 +16,7 @@ def get_webpage(module):
 
 
 if __name__ == "__main__":
-    modules = ['functools', 'collections', 'os', 'sys']
+    modules = ['functools', 'collections', 'os', 'sys', 'functools', 'collections', 'os', 'sys']
     for module in modules:
         page = get_webpage(module)
 
